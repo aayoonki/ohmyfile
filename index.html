@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>메뉴창으로 이동하기</p>
+    <script>
+        let result1 = 0;
+        let result2 = 0;
+        let exponent1 = prompt('제곱수', '');
+        let exponent2 = prompt('제곱수2', '');
+
+        function calculateExponent(a, b) {
+          result1 = a; // 초기값 설정
+          let count = 1;
+          while (count < b) {
+            result1 = a * result1; // 곱셈 수행
+            count++;
+          }
+          return result1; // result1 반환
+        }
+
+        if (exponent2 > 10) {
+          alert("제곱수2는 자연수여야합니다");
+        } else {
+            alert(calculateExponent( exponent1,exponent2));
+        }
+    </script>
+
+    <script>
+        function getMaxNumber(num1, num2) {
+          if (num1 > num2) {
+            return num1;
+          } else {
+            return num2;
+          }
+        }
+
+        let firstNumber = +prompt('첫수', '');
+        let secondNumber = +prompt('두수', '');
+
+        let maxValue = getMaxNumber(firstNumber, secondNumber); // 함수 호출 결과를 변수에 저장
+
+        alert(maxValue);
+        
+    </script>
+    <a href="menu.html">클릭시 메뉴로</a>
+    <script>
+        let qqqq = +prompt('나이를 알려주세요', '');
+        alert(checkAge(qqqq))
+        function checkAge(age) {
+          if (age >= 17) {
+            return true;
+          } else {
+            let consent = prompt('보호자의 동의를 받으셨나요? 받았다면 yes를 입력해주세요', '');
+            if (consent === 'yes') {
+              return 19;
+            } else {
+              return confirm('보호자의 동의를 받고와 주세요');
+            }
+          }
+        }
+        if (qqqq > 17) {
+          alert('접속 허용');
+        } else {
+          alert('접속 차단');
+        }
+
+
+        function sayHello() {
+          alert('안녕하세요');
+        }
+        sayHello();
+
+        function printInput(firstInput, secondInput) {
+          alert(`첫번째 입력한건 ${firstInput} 두번째 입력한건 ${secondInput}`);
+        }
+        let input1 = +prompt("입력해주세요", '');
+        let input2 = +prompt("입력해주세요", '');
+        printInput(input1, input2);
+    </script>
+
+    <script>
+        while (true) {
+          let inputValue = prompt("값을 입력하세요 100이상의 수나 esc키를 눌러주세요:");
+          if (inputValue >= 100 || inputValue === null || inputValue === "") {
+            break;
+          }
+        }
+    </script>
+    <script>
+        alert('지금부터 number이 3번 출력되고 숫자로 알려줄겁니다')
+         let i = 1;
+        while (i < 4) {
+          alert(`number ${i}!`);
+          i++;
+        }
+        let zzzz= +prompt ('짝수를 입력해주시면 2부터 그수까지의 짝수를 출력해드릴게요','')
+        if (zzzz==0 || zzzz % 2 !=0){
+            alert('짝수를 입력해주세요')
+        }
+        else{
+        for (let qqq = 1; qqq <= zzzz; qqq++) {
+          let w = qqq;
+          if (w % 2 === 0) {
+            alert(w);
+          }
+        }
+        }
+        let zzz = 1;
+        while (zzz < 3) {
+          let xxx = 0;
+          alert(`${xxx}번 반복되었습니다`);
+          zzz = zzz + 1;
+          alert(zzz);
+        }
+        let userInput = prompt("자바스크립트의 공식 이름은 무엇일까요?", "");
+        if (userInput === "ECMAScript") {
+          alert("정답입니다!");
+        } else {
+          alert("모르셨나요? 정답은 ECMAScript입니다!");
+        }
+
+        let number1 = +prompt("덧셈할 첫 번째 숫자를 입력해주세요.", 1);
+        let number2 = +prompt("덧셈할 두 번째 숫자를 입력해주세요.", 2);
+
+        alert(number1 + number2); // 12
+        let ageInput = prompt("나이를 입력해주세요.", '');
+        alert(ageInput);
+        if (ageInput <= 20) {
+          alert("미성년자는 이용할 수 없습니다");
+        }
+        let confirmation = confirm("웹을 이용하시겠습니까?");
+        alert(confirmation);
+        if (confirmation) {
+          alert("good");
+        }
+        let kk = 1, xx = 1;
+        let c = ++kk;
+        let d = xx++;
+    </script>
+    
+    <p>스크립트 후</p>
+</body>
+</html>
